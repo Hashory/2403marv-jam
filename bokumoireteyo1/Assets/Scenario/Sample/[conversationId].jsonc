@@ -1,0 +1,40 @@
+{
+  "conversationId": 1,
+  "bgId": 1,
+  "bgmId": 1,
+  "avatarId": [1, 0, 2],
+
+  "conversation": [
+    {
+      "avatarId": 1,
+      "text": "こんにちは"
+    },
+    {
+      "avatarId": 2,
+      "text": "こんにちは"
+    },
+    {
+      "avatarId": 1,
+      "text": "元気ですか？"
+    },
+    {
+      "avatarId": 2,
+      "text": "元気です"
+    }
+  ],
+
+  "choices": [
+    {
+      "text": "よぉ",
+      "correct": true
+    },
+    {
+      "text": "元気ですか",
+      "correct": false
+    },
+    {
+      "text": "どこから来ましたか",
+      "correct": false
+    }
+  ]
+}
