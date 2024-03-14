@@ -9,8 +9,4 @@ public class MainMenuManage : MonoBehaviour
     {
         SceneManager.LoadScene("StageSelect");
     }
-    public void GameEnd()
-    {
-        Application.Quit();
-    }
 }
