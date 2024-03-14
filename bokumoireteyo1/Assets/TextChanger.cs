@@ -1,24 +1,12 @@
-using JetBrains.Annotations;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
-public class Text : MonoBehaviour
+
+public class TextChanger : MonoBehaviour
 {
-    [SerializeField]
-    Text ScenarioMessage;
-
-    public Text guiText;
-
-    public GameObject a;
-    private Text b;
+    // [SerializeField]
+    private Text guiText;
 
     Scenario currentScenario;
-    string index;
-    public List<string> Texts;
 
     // Start is called before the first frame update
     public void Start()
@@ -26,6 +14,7 @@ public class Text : MonoBehaviour
 
         Scenario scenario = new Scenario(StageManager.StageNumber);
         
+        guiText = GameObject.Find("guiText").GetComponent<Text>();
         DisplayText(scenario);
     }
 
@@ -33,12 +22,8 @@ public class Text : MonoBehaviour
     {
         foreach (var index in sc.Conversation)
         {
-            Debug.Log(index);
-            //guiText.GetComponent<Text>().text = index;
-            b = a.GetComponent<Text>();
-            guiText.Texts = string.Format("{index}",sc.Text);
-
-            }
+            guiText.text = index.Text;
+        }
 
     }
 
