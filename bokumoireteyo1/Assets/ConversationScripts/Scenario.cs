@@ -31,7 +31,7 @@ public class Choice
 public class Scenario : ScenarioData
 {
     private readonly string[] fileNames = {
-        "sample.jsonc",
+        "sample",
         "1",
         "2"
     };
