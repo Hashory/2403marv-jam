@@ -6,7 +6,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
-using 
 public class Text : MonoBehaviour
 {
     [SerializeField]
@@ -18,7 +17,7 @@ public class Text : MonoBehaviour
     private Text b;
 
     Scenario currentScenario;
-    int index = 0;
+    string index;
     public List<string> Texts;
 
     // Start is called before the first frame update
@@ -37,7 +36,7 @@ public class Text : MonoBehaviour
             Debug.Log(index);
             //guiText.GetComponent<Text>().text = index;
             b = a.GetComponent<Text>();
-            b.Texts = index.text;
+            guiText.Texts = string.Format("{index}",sc.Text);
 
             }
 
