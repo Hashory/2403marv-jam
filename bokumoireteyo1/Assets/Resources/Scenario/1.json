@@ -1,43 +1,43 @@
 {
-  "conversationId": 1,
+  "ConversationId": 1,
 
-  "bgId": 1,
+  "BgId": 1,
 
-  "bgmId": 1,
+  "BgmId": 1,
 
-  "avatarId": [1, 0, 2],
+  "AvatarId": [1, 0, 2],
 
-  "conversation": [
+  "Conversation": [
     {
-      "avatarId": 1,
-      "text": "こんにちは"
+      "AvatarId": 1,
+      "Text": "こんにちは"
     },
     {
-      "avatarId": 2,
-      "text": "こんにちは"
+      "AvatarId": 2,
+      "Text": "こんにちは"
     },
     {
-      "avatarId": 1,
-      "text": "元気ですか？"
+      "AvatarId": 1,
+      "Text": "元気ですか？"
     },
     {
-      "avatarId": 2,
-      "text": "元気です"
+      "AvatarId": 2,
+      "Text": "元気です"
     }
   ],
 
-  "choices": [
+  "Choices": [
     {
-      "text": "よぉ",
-      "correct": true
+      "Text": "よぉ",
+      "Correct": true
     },
     {
-      "text": "元気ですか",
-      "correct": false
+      "Text": "元気ですか",
+      "Correct": false
     },
     {
-      "text": "どこから来ましたか",
-      "correct": false
+      "Text": "どこから来ましたか",
+      "Correct": false
     }
   ]
 }
