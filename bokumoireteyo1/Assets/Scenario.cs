@@ -28,6 +28,7 @@ public class Choice
 public class Scenario : ScenarioData
 {
     private readonly string[] fileNames = {
+        "sample.jsonc",
         "1.json",
         "2.json"
     };
@@ -38,8 +39,6 @@ public class Scenario : ScenarioData
     /// <param name="scenarioId">ƒVƒiƒŠƒI‚ÌId</param>
     public Scenario(int scenarioId)
     {
-        scenarioId = scenarioId - 1;
-
         TextAsset textAsset = Resources.Load<TextAsset>(fileNames[scenarioId]);
         if (textAsset == null)
         {
