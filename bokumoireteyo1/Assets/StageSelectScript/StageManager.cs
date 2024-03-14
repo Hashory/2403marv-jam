@@ -7,11 +7,17 @@ using UnityEngine.UI;
 public class StageManager: MonoBehaviour
 {
     public static int StageNumber;
+   
 
     public void SelectStage(int stage)
     {
         StageNumber = stage;
         Debug.Log(StageNumber);
         SceneManager.LoadScene("conversation");
+    }
+
+    public void BackTitle()
+    {
+        SceneManager.LoadScene("mainMenu");
     }
 }
