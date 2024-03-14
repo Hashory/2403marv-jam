@@ -2,26 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class ScenarioData
 {
-    public int ConversationId { get; set; }
-    public int BgId { get; set; }
-    public int BgmId { get; set; }
-    public List<int> AvatarId { get; set; }
-    public List<Dialogue> Conversation { get; set; }
-    public List<Choice> Choices { get; set; }
+    public int ConversationId;
+    public int BgId;
+    public int BgmId;
+    public List<int> AvatarId;
+    public List<Dialogue> Conversation;
+    public List<Choice> Choices;
 }
 
+[System.Serializable]
 public class Dialogue
 {
-    public int AvatarId { get; set; }
-    public string Text { get; set; }
+    public int AvatarId;
+    public string Text;
 }
 
+[System.Serializable]
 public class Choice
 {
-    public string Text { get; set; }
-    public bool Correct { get; set; }
+    public string Text;
+    public bool Correct;
 }
 
 // これ使って
@@ -29,8 +32,8 @@ public class Scenario : ScenarioData
 {
     private readonly string[] fileNames = {
         "sample.jsonc",
-        "1.json",
-        "2.json"
+        "1",
+        "2"
     };
 
     /// <summary>
@@ -39,12 +42,13 @@ public class Scenario : ScenarioData
     /// <param name="scenarioId">シナリオのId</param>
     public Scenario(int scenarioId)
     {
-        TextAsset textAsset = Resources.Load<TextAsset>(fileNames[scenarioId]);
+        TextAsset textAsset = Resources.Load<TextAsset>("Scenario/" + fileNames[scenarioId]);
         if (textAsset == null)
         {
             Debug.LogError("File not found: " + fileNames[scenarioId]);
             return;
         }
+        Debug.Log("TextData:" + textAsset.text);
 
         ScenarioData scenarioData = JsonUtility.FromJson<ScenarioData>(textAsset.text);
 
@@ -54,5 +58,7 @@ public class Scenario : ScenarioData
         AvatarId = scenarioData.AvatarId;
         Conversation = scenarioData.Conversation;
         Choices = scenarioData.Choices;
+
+        Debug.Log("ConversationId" + ConversationId);
     }
 }
