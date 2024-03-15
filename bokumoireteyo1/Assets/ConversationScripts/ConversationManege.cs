@@ -15,6 +15,8 @@ public class TextChanger : MonoBehaviour
     private bool isTyping = false;
     private string inputText = "";
     private IEnumerator typeTextFunc;
+    private bool Isfirst = true;
+    AudioSource audioSource;
 
     // インスペクタから設定
     public Text NameText;
@@ -34,7 +36,8 @@ public class TextChanger : MonoBehaviour
     public GameObject Bg;
     public GameObject MissionComplete;
     public GameObject MissionFailed;
-     
+    public AudioClip sound;
+
 
     public string playerName;
 
@@ -60,6 +63,9 @@ public class TextChanger : MonoBehaviour
         AvaterMiddle.GetComponent<Image>().sprite = Avaters[currentScenario.AvatarId[1] + 1];
         AvaterRight.GetComponent<Image>().sprite = Avaters[currentScenario.AvatarId[2] + 1];
 
+        //音を鳴らすための取得
+        audioSource = GetComponent<AudioSource>();
+
         Next();
     }
 
@@ -67,7 +73,7 @@ public class TextChanger : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
-        {
+        {   
             Next();
         }
     }
@@ -90,6 +96,13 @@ public class TextChanger : MonoBehaviour
         {
             if (ScenarioIndex < currentScenario.Conversation.Count)
             {
+                if (!Isfirst)
+                {
+                    //音を鳴らす
+                    audioSource.PlayOneShot(sound);
+                }else{
+                    Isfirst = false;
+                }
                 // 会話を表示
                 NameText.text = Names[currentScenario.Conversation[ScenarioIndex].AvatarId];
                 // dialogText.text = currentScenario.Conversation[ScenarioIndex].Text;
