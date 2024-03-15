@@ -7,6 +7,6 @@ public class MainMenuManage : MonoBehaviour
 {
     public void GameStart()
     {
-        FadeManager.Instance.LoadScene("Stageselect", 0.7f);
+        FadeManager.Instance.LoadScene("Stageselect", 0.5f);
     }
 }
