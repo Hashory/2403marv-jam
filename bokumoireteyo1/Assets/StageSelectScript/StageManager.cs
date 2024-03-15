@@ -13,11 +13,11 @@ public class StageManager: MonoBehaviour
     {
         StageNumber = stage;
         Debug.Log(StageNumber);
-        FadeManager.Instance.LoadScene("Conversation", 0.7f);
+        FadeManager.Instance.LoadScene("Conversation", 0.5f);
     }
 
     public void BackTitle()
     {
-        FadeManager.Instance.LoadScene("mainMenu", 0.7f);
+        FadeManager.Instance.LoadScene("mainMenu", 0.5f);
     }
 }

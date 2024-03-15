@@ -16,6 +16,6 @@ public class Return2StageSelecter : MonoBehaviour
     void OnButtonClick()
     {
         // TODO: ステージセレクターに戻る。
-        // UnityEngine.SceneManagement.SceneManager.LoadScene("StageSelecter");
+        FadeManager.Instance.LoadScene("Stageselect", 0.5f);
     }
 }
