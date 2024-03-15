@@ -27,19 +27,52 @@ public class Choice
     public bool Correct;
 }
 
-// ‚±‚êg‚Á‚Ä
+// ï¿½ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½
 public class Scenario : ScenarioData
 {
     private readonly string[] fileNames = {
         "sample",
         "1",
-        "2"
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35"
     };
 
     /// <summary>
-    /// ƒVƒiƒŠƒI‚ğJSONƒtƒ@ƒCƒ‹‚©‚ç“Ç‚İ‚İAC#‚ÌŒ^‚É‚µ‚Ü‚·B
+    /// ï¿½Vï¿½iï¿½ï¿½ï¿½Iï¿½ï¿½JSONï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç‚İï¿½ï¿½İAC#ï¿½ÌŒ^ï¿½É‚ï¿½ï¿½Ü‚ï¿½ï¿½B
     /// </summary>
-    /// <param name="scenarioId">ƒVƒiƒŠƒI‚ÌId</param>
+    /// <param name="scenarioId">ï¿½Vï¿½iï¿½ï¿½ï¿½Iï¿½ï¿½Id</param>
     public Scenario(int scenarioId)
     {
         TextAsset textAsset = Resources.Load<TextAsset>("Scenario/" + fileNames[scenarioId]);
