@@ -2653,7 +2653,7 @@ Transform:
   m_LocalScale: {x: 51.600002, y: 51.600002, z: 51.600002}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 662256213}
+  m_Father: {fileID: 874230139}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &357546207
 SpriteRenderer:
@@ -3964,7 +3964,7 @@ RectTransform:
   - {fileID: 905706095}
   - {fileID: 1132109394}
   - {fileID: 244051149}
-  - {fileID: 357546206}
+  - {fileID: 936133735}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5447,7 +5447,7 @@ RectTransform:
   - {fileID: 613238634}
   - {fileID: 481051273}
   - {fileID: 237947763}
-  - {fileID: 936133735}
+  - {fileID: 357546206}
   - {fileID: 1563116696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6527,7 +6527,7 @@ Transform:
   m_LocalScale: {x: 34.59, y: 34.59, z: 34.59}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 874230139}
+  m_Father: {fileID: 662256213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &936133736
 SpriteRenderer:
@@ -12618,11 +12618,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 04c6235b7bcbf614a86011b6027d4fdc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
