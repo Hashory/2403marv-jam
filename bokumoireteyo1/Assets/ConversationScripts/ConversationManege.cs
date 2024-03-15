@@ -36,7 +36,7 @@ public class TextChanger : MonoBehaviour
     public GameObject Bg;
     public GameObject MissionComplete;
     public GameObject MissionFailed;
-    public AudioClip sound;
+    public AudioClip click;
 
 
     public string playerName;
@@ -99,7 +99,7 @@ public class TextChanger : MonoBehaviour
                 if (!Isfirst)
                 {
                     //‰¹‚ð–Â‚ç‚·
-                    audioSource.PlayOneShot(sound);
+                    audioSource.PlayOneShot(click);
                 }else{
                     Isfirst = false;
                 }
