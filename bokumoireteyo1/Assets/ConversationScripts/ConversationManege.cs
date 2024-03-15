@@ -37,6 +37,13 @@ public class TextChanger : MonoBehaviour
     public GameObject MissionComplete;
     public GameObject MissionFailed;
     public AudioClip click;
+    public GameObject BGM1;
+    public GameObject BGM2;
+    public GameObject BGM3;
+    public GameObject BGM4;
+    public GameObject BGM5;
+    public GameObject BGM6;
+    public GameObject BGM7;
 
 
     public string playerName;
@@ -65,6 +72,34 @@ public class TextChanger : MonoBehaviour
 
         //‰¹‚ð–Â‚ç‚·‚½‚ß‚ÌŽæ“¾
         audioSource = GetComponent<AudioSource>();
+
+        //bgm
+        switch (currentScenario.BgId)
+        {
+            case 1:
+                BGM1.SetActive(true);
+                break;
+            case 2:
+                BGM2.SetActive(true);
+                break;
+            case 3:
+                BGM3.SetActive(true);
+                break;
+            case 4:
+                BGM4.SetActive(true);
+                break;
+            case 5:
+                BGM5.SetActive(true);
+                break;
+            case 6:
+                BGM6.SetActive(true);
+                break;
+            case 7:
+                BGM7.SetActive(true);
+                break;
+            default:
+                break;
+        }
 
         Next();
     }
