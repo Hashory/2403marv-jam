@@ -1,0 +1,20 @@
+name: Mirror & Filter to Public
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Mirror with filter
+        uses: Hashory/monorepo-package-mirror-action@main
+        with:
+          target_repo_url: git@github.com:Hashory/2403marv-jam.git
+          ssh_private_key: ${{ secrets.MIRROR_SSH_KEY }}
+          main_branch: master
